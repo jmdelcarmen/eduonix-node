@@ -72,6 +72,54 @@ router.route("/add")
     // console.log(req.file);
   });
 
+router.post('/addcomment', (req, res, next) => {
+  console.log('hi');
+  let name = req.body.name;
+  let email = req.body.email;
+  let body = req.body.body;
+  let postid = req.body.postid;
+  let commentdate = new Date();
+
+  req.checkBody('name', 'Name filed is required').notEmpty();
+  req.checkBody('email', 'Email filed is required but never displyed').notEmpty();
+  req.checkBody('email', 'Email is not formatted properly').isEmail();
+  req.checkBody('body', 'Body filed is required').notEmpty();
+
+  var errors = req.validationErrors();
+
+  if (errors) {
+    var posts = db.get('posts');
+    posts.findById(postid, (e, post) => {
+      res.render('post', {
+        "errors": errors,
+        "post": post
+      });
+    });
+  }
+  else {
+    var comment = {
+      "name": name,
+      "email": email,
+      "body": body,
+      "commentdate": commentdate
+    };
+
+    var posts = db.get('posts');
+    posts.update({_id: postid}, {$push:{"comments": comment}}, (e, post) => {
+      if (e) {
+        throw e;
+      }
+      else {
+          req.flash('success', 'Comment Added');
+          res.redirect('/posts/show/' +postid);
+      }
+
+    });
+  }
+
+});
+
+
 
 
 

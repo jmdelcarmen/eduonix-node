@@ -15,7 +15,8 @@ block content
        h3 Comments
         each comment, i in post.comments
           .comment
-            p.comment-name #{comment.name}
+            h1.comment-name #{comment.name}
+            p.comment-date #{comment.commentdate.toDateString()}
             p.comment-body #{comment.body}
         br      
     if errors
