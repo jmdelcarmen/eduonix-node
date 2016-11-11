@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title    
+    //- link(rel="stylesheet" href="/ckeditor/contents.css")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+  .container
+     img.logo(src="https://www.eduonix.com/aDmiN_050716/public/uploads/headerimages/20160401193829.png" width="100%" height="auto")
+     nav
+      ul
+       li
+        a(href="/") Home
+       li
+        a(href="/posts/add") Add Post
+       li
+        a(href="/categories/add") Add Category
+    != messages()
+    block content
+    
+    footer
+      p NodeBlog &copy; 2016

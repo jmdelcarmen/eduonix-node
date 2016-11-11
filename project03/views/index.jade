@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1.text-xs-center.text-primary.py-3= title
+  p.lead Only awesome people here...
+  p= user
+  img(src="#{user.profileImage}" width="200px" height=" 200px")
+  

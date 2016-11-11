@@ -1,0 +1,23 @@
+{
+  "name": "project04",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "connect-flash": "^0.1.1",
+    "express": "^4.13.4",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.14.2",
+    "express-validator": "^2.21.0",
+    "jade": "~1.11.0",
+    "moment": "^2.15.2",
+    "mongodb": "^1.4.4",
+    "monk": "^1.0.1",
+    "morgan": "~1.7.0",
+    "multer": "^1.2.0",
+    "nodemon": "^1.11.0"
+  }
+}

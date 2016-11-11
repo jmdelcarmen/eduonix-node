@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous")
+    link(rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav.navbar.navbar-light.bg-faded.navbar-fixed-top
+      button.navbar-toggler.hidden-lg-up(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+      #navbarResponsive.collapse.navbar-toggleable-md
+        a.navbar-brand(href='#') NodeAuth
+        ul.nav.navbar-nav
+          if user
+            li.nav-item(class=(title == "Members" ? "active" : ""))
+              a.nav-link(href='/')
+                | Members 
+                span.sr-only (current)
+          if !user
+            li.nav-item(class=(title == "Register" ? "active" : ""))
+              a.nav-link(href='/users/register') Register
+            li.nav-item(class=(title == "Login" ? "active" : ""))
+              a.nav-link(href='/users/login') Login
+              
+        ul.nav.navbar-nav.float-xs-right.mr-2
+          if user
+            li.nav-item
+              a.nav-link(href="/users/logout") Logout
+    != messages()
+    block content
