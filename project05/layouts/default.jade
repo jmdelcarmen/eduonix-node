@@ -27,6 +27,9 @@ html
             li: a(href='/contact/') Contact
           ul.nav.navbar-nav.navbar-right
             if user && user.username
+              li: a(href="/events/add")
+                i.fa.fa-plus
+                | Add event
               li: a(href='#{user.defaultReturnUrl}')
                 i.fa.fa-user
                 |  #{user.username}

@@ -9,18 +9,18 @@ block body
       div.page-header
         h1 #{event.name}
           small &nbsp: Posted by #{event.username}
-      ul.event-list
-        li
-          strong Venue:
+      ul.event-list.list-group
+        li.list-group-item
+          strong Venue: 
           | #{event.venue}
-        li
-          strong  Date:
+        li.list-group-item
+          strong  Date: 
           | #{event.date}
-        li
-          strong Start Time:
+        li.list-group-item
+          strong Start Time: 
           | #{event.startTime}
-        li
-          strong End Time:
+        li.list-group-item
+          strong End Time: 
           | #{event.endTime}
       p #{event.description}
       p
