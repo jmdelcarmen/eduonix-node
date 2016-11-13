@@ -1,0 +1,36 @@
+extends ../../layouts/default
+
+block head
+  title Add Event
+  
+block body
+  div.row
+    div.col-sm-8
+      div.page-header
+        h1 Edit Event
+        form(method="post" action="/events/update/#{event._id}")
+          div.form-group
+            label Event Name:
+            input.form-control(type="text" name="name" value="#{event.name}")
+          div.form-group
+            label Event Description:
+            textarea.form-control(name="description" value="#{event.description}")
+          div.form-group
+            label Venue:
+            input.form-control(type="text" name="venue" value="#{event.venue}")
+          div.form-group
+            label Event Date:
+            input.form-control(type="date" name="date" value="#{event.date}")
+          div.form-group
+            label Start Time:
+            input.form-control(type="time" name="startTime" value="#{event.startTime}")
+          div.form-group
+            label End Time:
+            input.form-control(type="time" name="endTime" value="#{event.endTime}")
+          div.form-group
+            button.btn.btn-primary.btn-signup(type="submit") Update
+    div.col-sm-4
+      div.page-header
+        h1 Sidebar
+            
+          

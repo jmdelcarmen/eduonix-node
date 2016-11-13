@@ -1,0 +1,27 @@
+extends ../../layouts/default
+
+block head
+ title My Events
+ 
+block body
+ div.row
+  div.col-sm-8
+   div.page-header
+    h1 My Events
+   ul.events
+    each event, i in events
+     li
+      strong #{event.name} - 
+      | posted by #{event.username}
+      p #{event.description}
+      a(href="/events/show/#{event._id}" class="btn btn-primary") Read More
+      a(href="/events/edit/#{event.id}" class="btn btn-secondary")  
+        i.fa.fa-pencil
+        |  Edit 
+      a(href="/events/delete/#{event.id}" class="btn btn-secondary")
+        i.fa.fa-trash
+        |  Delete
+  div.col-sm-4
+    div.page-header
+      h1 Sidebar     
+       
