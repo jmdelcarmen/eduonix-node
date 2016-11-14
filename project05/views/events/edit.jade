@@ -14,7 +14,7 @@ block body
             input.form-control(type="text" name="name" value="#{event.name}")
           div.form-group
             label Event Description:
-            textarea.form-control(name="description" value="#{event.description}")
+            textarea.form-control(name="description")= event.description
           div.form-group
             label Venue:
             input.form-control(type="text" name="venue" value="#{event.venue}")

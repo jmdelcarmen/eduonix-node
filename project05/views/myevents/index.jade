@@ -18,7 +18,7 @@ block body
       a(href="/events/edit/#{event.id}" class="btn btn-secondary")  
         i.fa.fa-pencil
         |  Edit 
-      a(href="/events/delete/#{event.id}" class="btn btn-secondary")
+      a(id="deleteEvent" data-delete="#{event._id}" class="btn btn-secondary")
         i.fa.fa-trash
         |  Delete
   div.col-sm-4

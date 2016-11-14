@@ -23,16 +23,17 @@ html
             li: a(href='/') Home
             li: a(href='/about/') About
             li: a(href='/events/') Events
-            li: a(href='/signup/') Sign Up
+            if !user
+              li: a(href='/signup/') Sign Up
             li: a(href='/contact/') Contact
           ul.nav.navbar-nav.navbar-right
             if user && user.username
               li: a(href="/events/add")
                 i.fa.fa-plus
-                | Add event
+                |  Add event
               li: a(href="/myevents")
                 i.fa.fa-calendar
-                | My event
+                |  My event
               li: a(href='#{user.defaultReturnUrl}')
                 i.fa.fa-user
                 |  #{user.username}
@@ -43,6 +44,7 @@ html
 
     div.page
       div.container
+        != messages()
         block body
 
     div.footer
@@ -60,5 +62,6 @@ html
     //if lte IE 9
       script(src='/layouts/ie-sucks.min.js?#{cacheBreaker}')
     script(src='/layouts/core.min.js?#{cacheBreaker}')
+    script(src='/layouts/main.js')  
 
     block feet

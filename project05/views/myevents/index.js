@@ -33,17 +33,3 @@ exports.find = function(req, res, next){
     }
   });
 }
-
-exports.edit = function(req, res, next){
-  req.app.db.models.Event.findById(req.params.id).exec(function (e, event) {
-    if (e) {
-      return next(e);
-    }
-    if (req.xhr) {
-      res.send(event);
-    }
-    else {
-      res.render('events/edit', {event: event});
-    }
-  });
-}
