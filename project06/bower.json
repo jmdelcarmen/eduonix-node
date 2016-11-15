@@ -1,0 +1,21 @@
+{
+  "name": "teck-books",
+  "description": "Simple Technology Book Store",
+  "main": "index.js",
+  "author": "Marco",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.1.16"
+  }
+}
