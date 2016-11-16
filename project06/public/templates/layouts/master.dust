@@ -48,7 +48,7 @@
             {+body /}
             <footer>
               <p class="lead text-xs-center">
-                Teck Books &copy; 2016 | <a href="#">Manage</a>
+                Teck Books &copy; 2016 | <a href="/manage">Manage</a>
               </p>
             </footer>
         </div>
