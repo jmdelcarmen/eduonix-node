@@ -1,5 +1,43 @@
 {>"layouts/master" /}
 
 {<body}
-    <h1>{@pre type="content" key="greeting"/}</h1>
+  <div class="col-lg-3">
+    <img src="/images/webdesign.png" alt="" class="img-fluid" />
+    <h4>Basic Web Design</h4>
+    <p>Led ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque igir.</p>
+    <div class="price">Buy it for <span>$19.99</span>
+      <br>
+      <a href="/books/details/1" class="btn btn-md btn-info">Book Details</a>
+    </div>
+  </div>
+
+  <div class="col-lg-3">
+    <img src="/images/emberjs.png" alt="" class="img-fluid" />
+    <h4>Ember JS</h4>
+    <p>Led ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque igir.</p>
+    <div class="price">Buy it for <span>$19.99</span>
+      <br>
+      <a href="/books/details/2" class="btn btn-md btn-info">Book Details</a>
+    </div>
+  </div>
+
+  <div class="col-lg-3">
+    <img src="/images/php.png" alt="" class="img-fluid" />
+    <h4>Basic PHP</h4>
+    <p>Led ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque igir.</p>
+    <div class="price">Buy it for <span>$19.99</span>
+      <br>
+      <a href="/books/details/3" class="btn btn-md btn-info">Book Details</a>
+    </div>
+  </div>
+
+  <div class="col-lg-3">
+    <img src="/images/lamp.png" alt="" class="img-fluid" />
+    <h4>LAMP Fundamentals</h4>
+    <p>Led ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque igir.</p>
+    <div class="price">Buy it for <span>$19.99</span>
+      <br>
+      <a href="/books/details/1" class="btn btn-md btn-info">Book Details</a>
+    </div>
+  </div>
 {/body}
