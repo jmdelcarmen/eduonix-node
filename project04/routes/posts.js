@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 //db
-const db = require('monk')('localhost/nodeblog');
+const db = require('monk')(process.env.MONGO_DB_URI);
 //file upload
 const multer = require('multer');
 const upload = multer({dest: 'public/uploads'});

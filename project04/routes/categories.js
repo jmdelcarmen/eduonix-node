@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('monk')('localhost/nodeblog');
+const db = require('monk')(process.env.MONGO_DB_URI);
 
 
 router.get('/show/:category', (req, res) => {

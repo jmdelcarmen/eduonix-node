@@ -12,7 +12,8 @@ const multer = require('multer');
 const upload = multer({dest: 'public/uploads'});
 // const upload = multer({dest: 'public/uploads'});
 //db stuff
-const db = require('monk')('localhost/nodeblog');
+require('dotenv').config();
+const db = require('monk')(process.env.MONGO_DB_URI);
 //routes
 const routes = require('./routes/index');
 const posts = require('./routes/posts');
@@ -113,7 +114,6 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 
 console.log('Wooo! Here we go!....');
