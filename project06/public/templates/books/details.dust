@@ -15,7 +15,10 @@
     <hr>
     <div class="price"><span>${book.price}</span>
       <p class="my-2">{book.description}</p>
-      <a href="#" class="btn btn-success col-lg-3">Add To Cart</a>
+
+      <form method="post" action="/cart/{book._id}">
+        <button type="submit" class="btn btn-success">Add to cart</button>
+      </form>
     </div>
   </div>
 

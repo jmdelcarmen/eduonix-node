@@ -17,6 +17,7 @@
     "construx-dustjs": "^1.1.0",
     "construx-less": "^1.0.0",
     "dust-makara-helpers": "^4.1.2",
+    "dustjs-helpers": "^1.7.3",
     "eslint": "^1.10.3",
     "express": "^4.12.2",
     "express-messages": "^1.0.1",

@@ -23,7 +23,7 @@
 
     "dust": {
         "helpers": [
-
+            "dustjs-helpers",
             "dust-makara-helpers"
 
         ]

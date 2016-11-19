@@ -46,5 +46,9 @@ img {
 
 .row .btn {
   margin-top: 1em;
-  display: block !important;
+  /*display: block !important;*/
+}
+
+h2 span {
+  font-size: 18px;
 }
