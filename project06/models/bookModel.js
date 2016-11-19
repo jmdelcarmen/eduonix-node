@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose');
 
-var bookMode = function () {
+var bookModel = function () {
   var bookSchema = mongoose.Schema({
     title: String,
     category: String,
@@ -12,6 +12,11 @@ var bookMode = function () {
     price: Number,
     cover: String
   });
+
+  //Shorten Text
+  bookSchema.methods.truncText = function (length) {
+    return this.description.substring(0, length);
+  }
 
   return mongoose.model('Book', bookSchema);
 }

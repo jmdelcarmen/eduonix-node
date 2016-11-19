@@ -45,6 +45,7 @@
       </div>
 
         <div id="wrapper" class="row">
+          {messages|s}
             {+body /}
             <footer>
               <p class="lead text-xs-center">

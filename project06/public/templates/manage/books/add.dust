@@ -1,2 +1,30 @@
 {>"layouts/manage" /}
-ADD BOOKS
+{<body}
+  <div class="row container mx-auto">
+    <div class="col-lg-12">
+      <h2>Add Book</h2>
+      <form method="post" action="/manage/books">
+        <label>Title</label>
+        <input class="form-control" type="text" name="title" required>
+        <label>Author</label>
+        <input class="form-control" type="text" name="author">
+        <label>Publisher</label>
+        <input class="form-control" type="text" name="publisher">
+        <label>Price</label>
+        <input class="form-control" type="text" name="price" required>
+        <label>Category</label>
+        <select class="form-control" name="category">
+          {#categories}
+            <option value="{.name}">{.name}</option>
+          {/categories}
+        </select>
+        <label>Description</label>
+        <textarea class="form-control" name="description"></textarea>
+        <label>Cover URL</label>
+        <input class="form-control" type="text" name="cover">
+        <!-- <input type="hidden" name="_csrf" value="{csrf}"> -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+{/body}

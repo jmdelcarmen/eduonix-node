@@ -37,14 +37,15 @@
 
       <div class="jumbotron">
         <h1 class="display-3 text-xs-center">Tech Immersion</h1>
-        <hr class="my-2">
+        <hr class="my-1">
         <p class="lead text-xs-center">Immerse yourself in the latest and newest books on <a href="#">software development</a>, <a href="#">artificial intelligence</a>, and <a href="#">space travel.</a></p>
-        <p class="lead text-xs-center mt-3">
+        <p class="lead text-xs-center mt-1">
           <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
         </p>
       </div>
 
         <div id="wrapper" class="row">
+          {messages|s}
             {+body /}
             <footer>
               <p class="lead text-xs-center">

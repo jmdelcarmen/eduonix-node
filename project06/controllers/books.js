@@ -1,4 +1,6 @@
 'use strict';
+var Book = require('../models/bookModel');
+var Category = require('../models/categoryModel');
 
 module.exports = function (router) {
 
@@ -7,7 +9,13 @@ module.exports = function (router) {
   });
 
   router.get('/details/:id', function (req, res) {
-    res.render('books/details');
+    Book.findById(req.params.id, function (err, book) {
+      if (err) {
+        console.log(err);
+      }
+
+      res.render('books/details', {book: book});
+    });
   });
 
 }

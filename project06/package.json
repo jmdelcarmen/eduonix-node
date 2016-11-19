@@ -21,6 +21,7 @@
     "express": "^4.12.2",
     "express-messages": "^1.0.1",
     "kraken-js": "^2.0.0",
+    "lusca": "^1.4.1",
     "makara": "^2.0.3",
     "mongoose": "^4.6.8",
     "nodemon": "^1.11.0",

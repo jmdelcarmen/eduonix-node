@@ -1,1 +1,8 @@
 {>"layouts/manage" /}
+
+{<body}
+  <div class="text-xs-center">
+    <h2 class="display-4">Manager</h2>
+    <p>This is the manager's area</p>
+  </div>
+{/body}
