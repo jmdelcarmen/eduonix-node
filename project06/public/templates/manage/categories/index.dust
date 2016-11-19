@@ -1,2 +1,26 @@
 {>"layouts/manage" /}
-INDEX CATEGORIES
+
+{<body}
+  <h2>Categories</h2>
+  <p><a class="mx-auto col-lg-1 px-1 btn py-1 btn-primary" href="/manage/categories/add">Add Category</a></p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th width="200">ID</th>
+        <th width="200">Category</th>
+        <th width="180"></th>
+        <th width="180"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {#categories}
+      <tr>
+        <td>{._id}</td>
+        <td>{.name}</td>
+        <td><a class="btn btn-md btn-success" href="/manage/categories/edit/{._id}">Edit</a></td>
+        <td><a class="btn btn-md btn-danger" href="/manage/categories/delete/{._id}">Delete</a></td>
+      </tr>
+      {/categories}
+    </tbody>
+  </table>
+{/body}

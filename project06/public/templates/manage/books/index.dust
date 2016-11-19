@@ -19,8 +19,8 @@
         <td>{._id}</td>
         <td>{.title}</td>
         <td>{.category}</td>
-        <td><a class="btn btn-md btn-success" href="/manage/books/edit/"{._id}>Edit</a></td>
-        <td><a class="btn btn-md btn-danger" href="#">Delete</a></td>
+        <td><a class="btn btn-md btn-success" href="/manage/books/edit/{._id}">Edit</a></td>
+        <td><a class="btn btn-md btn-danger" href="/manage/books/delete/{._id}">Delete</a></td>
       </tr>
       {/books}
     </tbody>

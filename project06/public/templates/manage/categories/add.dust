@@ -1,2 +1,13 @@
 {>"layouts/manage" /}
-ADD CATEGORIES
+{<body}
+  <div class="row container mx-auto">
+    <div class="col-lg-12">
+      <h2>Add Category</h2>
+      <form method="post" action="/manage/categories/add">
+        <label>Name</label>
+        <input class="form-control" type="text" name="name" required>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+{/body}

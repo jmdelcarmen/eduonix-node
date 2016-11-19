@@ -2,7 +2,7 @@
 
 {<body}
   <div class="col-lg-4 text-lg-center">
-    <img src="/images/{book.cover}" alt="" class="img-fluid" />
+    <img src="{book.cover}" alt="" class="img-fluid" />
   </div>
 
   <div class="col-lg-8">

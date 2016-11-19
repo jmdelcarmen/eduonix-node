@@ -4,7 +4,7 @@
   {#books}
     <div class="col-lg-3">
       <a href="/books/details/{._id}" class="btn btn-default">
-        <img src="/images/{.cover}" alt="" class="img-fluid" />
+        <img src="{.cover}" alt="" class="img-fluid" />
       </a>
       <h4>{.title}</h4>
       <p>{.truncText}</p>
