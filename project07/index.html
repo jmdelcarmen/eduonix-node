@@ -3,67 +3,10 @@
   <head>
     <title>ChatIO</title>
     <meta charset="utf-8">
-    <style media="screen">
-      body {
-        background: #f9f9f9;
-      }
-
-      #container {
-        width: 700px;
-        margin: 0 auto;
-      }
-
-      #chatWindow {
-        min-height: 300px;
-        width: 100%;
-        height: 400px;
-        overflow: scroll;
-      }
-
-      #mainWrapper {
-        display: none;
-      }
-
-      #chatWrapper {
-        float: left;
-        border: 1px #ccc solid;
-        border-radius: 10px;
-        background: #f4f4f4;
-        padding: 10px;
-      }
-
-      #userWrapper {
-        float: left;
-        border: 1px #ccc solid;
-        border-radius: 10px;
-        background: #f4f4f4;
-        padding: 10px;
-        margin-left: 20px;
-        width: 150px;
-        max-width: 200px;
-      }
-
-      #namesWrapper {
-        float: left;
-        border: 1px #ccc solid;
-        border-radius: 10px;
-        background: #f4f4f4;
-        padding: 10px;
-        margin-left: 20px;
-      }
-
-      input {
-        height: 20px;
-        font-size: 1.05em;
-      }
-
-      </style>
+    <link rel="stylesheet" href="/main.css">
   </head>
 
-
   <body>
-
-
     <div id="container">
       <div id="namesWrapper">
         <h2>ChatIO</h2>
@@ -75,8 +18,6 @@
         </form>
       </div>
     </div>
-
-
     <div id="mainWrapper">
       <h2>ChatIO</h2>
       <div id="chatWrapper">
@@ -87,70 +28,15 @@
         </form>
       </div>
     </div>
-
-
     <div id="userWrapper">
       <div id="users"></div>
     </div>
 
-
-
-
-
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/index.js">
 
-    <script>
-    $(function () {
-      var socket = io.connect();
-      var $messageForm = $('#messageForm');
-      var $message = $('#message');
-      var $chat = $('#chatWindow');
-      var $usernameForm = $('#usernameForm');
-      var $users = $('#users');
-      var $username = $('#username');
-      var $error = $('#error');
-
-      $messageForm.submit((e) => {
-        e.preventDefault();
-        socket.emit('send message', $message.val());
-        $message.val('');
-        $("#chatWindow").animate({ scrollTop: 10000000});
-      });
-
-
-
-      $usernameForm.submit((e) => {
-        e.preventDefault();
-        socket.emit('new user', $username.val(), (data) => {
-          if (data) {
-            $('#namesWrapper').hide();
-            $('#mainWrapper').show();
-          } else {
-            $error.html('Username is taken');
-          }
-        });
-      });
-
-      socket.on('usernames', (usernames) => {
-        var users = '';
-        for (var i = 0; i < usernames.length; i++) {
-          users += usernames[i] + '<br>';
-        }
-        $users.html(users);
-      });
-
-      socket.on('new message', (data) => {
-        if (data) {
-          $chat.append('<p>' + '<strong>' + data.user + '</strong>: ' +  data.msg + '<br>');
-        }
-      });
-
-      socket.on('usernames', (usernames) => {
-
-      });
-
-    });
     </script>
+
   </body>
 </html>

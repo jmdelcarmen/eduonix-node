@@ -8,7 +8,10 @@ body {
 }
 
 #chatWindow {
-  height: 300px;
+  min-height: 300px;
+  width: 100%;
+  height: 400px;
+  overflow: scroll;
 }
 
 #mainWrapper {
@@ -44,5 +47,6 @@ body {
 }
 
 input {
-  height: 30px;
+  height: 20px;
+  font-size: 1.05em;
 }
