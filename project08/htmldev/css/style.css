@@ -136,10 +136,47 @@ color: #fff;
 #footer a { color: #fff; }
 
 
-/**********CUSTOM STYLES************/
+/*****************CUSTOM STYLES*****************/
+
 ul.docs li {
 	float: left;
 	list-style: none;
 	width: 50%;
 	margin-bottom: 20px;
+}
+
+label {
+	display: inline-block;
+	font-size: 1.2em;
+}
+
+form div {
+	margin: 10px 0;
+}
+
+input {
+	height: 20px;
+	font-size: 1.05em;
+}
+
+.details-left {
+	width: 30%;
+	float: left;
+}
+
+.details-right {
+	width: 60%;
+	float: right;
+}
+
+.doc-info li, .practice-info li {
+	line-height: 2em;
+	list-style: none;
+	border-bottom: 1px #ccc solid;
+}
+
+.details-right h3 {
+	padding: 5px;
+	margin: 20px 0 10px;
+	background: #f4f4f4;
 }
