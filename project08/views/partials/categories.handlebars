@@ -1,9 +1,6 @@
 <h2>Categories :</h2>
 <ul>
-  <li><a href="#">General</a></li>
-  <li><a href="#">Audiologist</a></li>
-  <li><a href="#">Cardiologist</a></li>
-  <li><a href="#">Dentist</a></li>
-  <li><a href="#">Emergency Doctor</a></li>
-  <li><a href="#">Neurologist</a></li>
+  {{#each cats}}
+  <li><a href="/doctors/category/{{name}}">{{name}}</a></li>
+  {{/each}}
 </ul>

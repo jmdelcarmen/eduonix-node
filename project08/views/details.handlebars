@@ -1,0 +1,19 @@
+<strong><a href="/doctors">Go Back</a></strong>
+
+<br>
+  <h2>{{doctor.full_name}}</h2>
+  <br>
+  <h3>Physician Information</h4>
+  <ul class="doc-info">
+    <li>Full Name: {{doctor.full_name}}</li>
+    <li>Accepting New Patients: Yes</li>
+    <li>Specialty/Category: {{doctor.category}}</li>
+    <li>Graduation Date {{doctor.graduation_year}}</li>
+    <li>Practice: {{doctor.practice_name}}</li>
+  </ul>
+  <h3>Practice Information</h3>
+  <ul class="practice-info">
+    <li>Name: {{doctor.practice_name}}</li>
+    <li>Address: {{doctor.street_address}} {{doctor.city}}, {{doctor.state}}</li>
+  </ul>
+  <br>

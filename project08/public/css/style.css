@@ -4,7 +4,7 @@
 }
 
 body {
-background: #fff;
+background: #f1f1f1;
 font-family: "Trebuchet MS" Verdana, Arial, Helvetica, sans-serif;
 font-size: 12px;
 line-height: 17px;
@@ -23,6 +23,9 @@ color: #111;
 #wrap {
 margin: 0 auto;
 width: 780px;
+background: #fff;
+margin-top: 1em;
+box-shadow: 1 1 6px rgba(0, 0, 0, 0.5);
 }
 
 #header {
@@ -179,4 +182,9 @@ input {
 	padding: 5px;
 	margin: 20px 0 10px;
 	background: #f4f4f4;
+}
+
+
+#content {
+	min-height: calc(100vh - 180px);
 }
